@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		013130D628B54FF600A1C504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013130D528B54FF600A1C504 /* AppDelegate.swift */; };
 		013130D828B54FF600A1C504 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013130D728B54FF600A1C504 /* SceneDelegate.swift */; };
-		013130DA28B54FF600A1C504 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013130D928B54FF600A1C504 /* ViewController.swift */; };
+		013130DA28B54FF600A1C504 /* FavoriteSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013130D928B54FF600A1C504 /* FavoriteSongViewController.swift */; };
 		013130DD28B54FF600A1C504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 013130DB28B54FF600A1C504 /* Main.storyboard */; };
 		013130DF28B54FF800A1C504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 013130DE28B54FF800A1C504 /* Assets.xcassets */; };
 		013130E228B54FF800A1C504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 013130E028B54FF800A1C504 /* LaunchScreen.storyboard */; };
 		013130ED28B54FF900A1C504 /* UITableViewExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013130EC28B54FF900A1C504 /* UITableViewExampleTests.swift */; };
 		013130F728B54FF900A1C504 /* UITableViewExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013130F628B54FF900A1C504 /* UITableViewExampleUITests.swift */; };
 		013130F928B54FF900A1C504 /* UITableViewExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013130F828B54FF900A1C504 /* UITableViewExampleUITestsLaunchTests.swift */; };
+		018E545B28B5553A00E6338E /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E545A28B5553A00E6338E /* Song.swift */; };
+		018E545D28B5555A00E6338E /* SongMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E545C28B5555A00E6338E /* SongMock.swift */; };
+		018E545F28B555B000E6338E /* FavoriteSongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E545E28B555B000E6338E /* FavoriteSongsViewModel.swift */; };
+		018E546228B5567F00E6338E /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E546028B5567F00E6338E /* SongTableViewCell.swift */; };
+		018E546328B5567F00E6338E /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018E546128B5567F00E6338E /* SongTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +44,7 @@
 		013130D228B54FF600A1C504 /* UITableViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITableViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		013130D528B54FF600A1C504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		013130D728B54FF600A1C504 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		013130D928B54FF600A1C504 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		013130D928B54FF600A1C504 /* FavoriteSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSongViewController.swift; sourceTree = "<group>"; };
 		013130DC28B54FF600A1C504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		013130DE28B54FF800A1C504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		013130E128B54FF800A1C504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,11 @@
 		013130F228B54FF900A1C504 /* UITableViewExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITableViewExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		013130F628B54FF900A1C504 /* UITableViewExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExampleUITests.swift; sourceTree = "<group>"; };
 		013130F828B54FF900A1C504 /* UITableViewExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		018E545A28B5553A00E6338E /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		018E545C28B5555A00E6338E /* SongMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongMock.swift; sourceTree = "<group>"; };
+		018E545E28B555B000E6338E /* FavoriteSongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSongsViewModel.swift; sourceTree = "<group>"; };
+		018E546028B5567F00E6338E /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		018E546128B5567F00E6338E /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +111,15 @@
 			children = (
 				013130D528B54FF600A1C504 /* AppDelegate.swift */,
 				013130D728B54FF600A1C504 /* SceneDelegate.swift */,
-				013130D928B54FF600A1C504 /* ViewController.swift */,
+				013130D928B54FF600A1C504 /* FavoriteSongViewController.swift */,
 				013130DB28B54FF600A1C504 /* Main.storyboard */,
 				013130DE28B54FF800A1C504 /* Assets.xcassets */,
 				013130E028B54FF800A1C504 /* LaunchScreen.storyboard */,
 				013130E328B54FF800A1C504 /* Info.plist */,
+				018E546728B59CD900E6338E /* Models */,
+				018E546628B59CD000E6338E /* Mock */,
+				018E546528B59CCA00E6338E /* ViewModels */,
+				018E546428B59CC500E6338E /* Views */,
 			);
 			path = UITableViewExample;
 			sourceTree = "<group>";
@@ -125,6 +139,39 @@
 				013130F828B54FF900A1C504 /* UITableViewExampleUITestsLaunchTests.swift */,
 			);
 			path = UITableViewExampleUITests;
+			sourceTree = "<group>";
+		};
+		018E546428B59CC500E6338E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				018E546028B5567F00E6338E /* SongTableViewCell.swift */,
+				018E546128B5567F00E6338E /* SongTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		018E546528B59CCA00E6338E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				018E545E28B555B000E6338E /* FavoriteSongsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		018E546628B59CD000E6338E /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				018E545C28B5555A00E6338E /* SongMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		018E546728B59CD900E6338E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				018E545A28B5553A00E6338E /* Song.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018E546328B5567F00E6338E /* SongTableViewCell.xib in Resources */,
 				013130E228B54FF800A1C504 /* LaunchScreen.storyboard in Resources */,
 				013130DF28B54FF800A1C504 /* Assets.xcassets in Resources */,
 				013130DD28B54FF600A1C504 /* Main.storyboard in Resources */,
@@ -258,9 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				013130DA28B54FF600A1C504 /* ViewController.swift in Sources */,
+				018E545B28B5553A00E6338E /* Song.swift in Sources */,
+				018E545F28B555B000E6338E /* FavoriteSongsViewModel.swift in Sources */,
+				013130DA28B54FF600A1C504 /* FavoriteSongViewController.swift in Sources */,
+				018E546228B5567F00E6338E /* SongTableViewCell.swift in Sources */,
 				013130D628B54FF600A1C504 /* AppDelegate.swift in Sources */,
 				013130D828B54FF600A1C504 /* SceneDelegate.swift in Sources */,
+				018E545D28B5555A00E6338E /* SongMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
