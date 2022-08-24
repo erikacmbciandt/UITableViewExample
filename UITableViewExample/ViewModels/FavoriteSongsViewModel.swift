@@ -15,4 +15,8 @@ protocol FavoriteSongsViewModelProtocol {
 final public class FavoriteSongsViewModel: FavoriteSongsViewModelProtocol {
     var title = "Favorite Songs"
     var songs = SongMock().loadSongs()
+
+    func addSong(withTitle title: String, andPerformedBy performer: String) {
+        songs.append(Song(title: title, performer: performer))
+    }
 }

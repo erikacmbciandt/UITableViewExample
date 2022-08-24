@@ -21,6 +21,7 @@
 		018E545F28B555B000E6338E /* FavoriteSongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E545E28B555B000E6338E /* FavoriteSongsViewModel.swift */; };
 		018E546228B5567F00E6338E /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E546028B5567F00E6338E /* SongTableViewCell.swift */; };
 		018E546328B5567F00E6338E /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018E546128B5567F00E6338E /* SongTableViewCell.xib */; };
+		018E546928B68F5700E6338E /* AddSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E546828B68F5700E6338E /* AddSongViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		018E545E28B555B000E6338E /* FavoriteSongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSongsViewModel.swift; sourceTree = "<group>"; };
 		018E546028B5567F00E6338E /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		018E546128B5567F00E6338E /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
+		018E546828B68F5700E6338E /* AddSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSongViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,14 +114,15 @@
 				013130D528B54FF600A1C504 /* AppDelegate.swift */,
 				013130D728B54FF600A1C504 /* SceneDelegate.swift */,
 				013130D928B54FF600A1C504 /* FavoriteSongViewController.swift */,
+				018E546828B68F5700E6338E /* AddSongViewController.swift */,
 				013130DB28B54FF600A1C504 /* Main.storyboard */,
 				013130DE28B54FF800A1C504 /* Assets.xcassets */,
 				013130E028B54FF800A1C504 /* LaunchScreen.storyboard */,
 				013130E328B54FF800A1C504 /* Info.plist */,
-				018E546728B59CD900E6338E /* Models */,
 				018E546628B59CD000E6338E /* Mock */,
-				018E546528B59CCA00E6338E /* ViewModels */,
+				018E546728B59CD900E6338E /* Models */,
 				018E546428B59CC500E6338E /* Views */,
+				018E546528B59CCA00E6338E /* ViewModels */,
 			);
 			path = UITableViewExample;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				013130DA28B54FF600A1C504 /* FavoriteSongViewController.swift in Sources */,
 				018E546228B5567F00E6338E /* SongTableViewCell.swift in Sources */,
 				013130D628B54FF600A1C504 /* AppDelegate.swift in Sources */,
+				018E546928B68F5700E6338E /* AddSongViewController.swift in Sources */,
 				013130D828B54FF600A1C504 /* SceneDelegate.swift in Sources */,
 				018E545D28B5555A00E6338E /* SongMock.swift in Sources */,
 			);

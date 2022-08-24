@@ -31,14 +31,82 @@
                             <constraint firstItem="wa8-q2-1VR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xDT-kp-yWz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Q5t-xT-gIc"/>
+                    <navigationItem key="navigationItem" id="Q5t-xT-gIc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="y5t-0U-d4h">
+                            <connections>
+                                <action selector="addFavoriteSong:" destination="BYZ-38-t0r" id="gwM-Xh-cKa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="addSongButton" destination="y5t-0U-d4h" id="m5j-jp-2Yc"/>
                         <outlet property="tableView" destination="wa8-q2-1VR" id="jIf-js-EUY"/>
+                        <segue destination="akr-hh-VNu" kind="show" identifier="addFavoriteSong" id="cdM-MA-SDz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="893" y="66"/>
+        </scene>
+        <!--Add Song View Controller-->
+        <scene sceneID="MGr-ZR-M7o">
+            <objects>
+                <viewController id="akr-hh-VNu" customClass="AddSongViewController" customModule="UITableViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zyT-gm-Gfe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k2m-a1-X2e">
+                                <rect key="frame" x="20" y="128" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="1Aq-Q1-F9A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song Performer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4y9-OJ-AMm">
+                                <rect key="frame" x="20" y="182" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Vbk-8E-rsm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bF-Mf-cxc">
+                                <rect key="frame" x="20" y="236" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="ACu-Lw-vxA"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveFavoriteSong:" destination="akr-hh-VNu" eventType="touchUpInside" id="phr-Zt-AdK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N0u-v2-U34"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N0u-v2-U34" firstAttribute="trailing" secondItem="4y9-OJ-AMm" secondAttribute="trailing" constant="20" id="47r-qB-LDX"/>
+                            <constraint firstItem="0bF-Mf-cxc" firstAttribute="leading" secondItem="N0u-v2-U34" secondAttribute="leading" constant="20" id="EOT-uG-TE2"/>
+                            <constraint firstItem="4y9-OJ-AMm" firstAttribute="top" secondItem="k2m-a1-X2e" secondAttribute="bottom" constant="20" id="NRe-Wl-Kxw"/>
+                            <constraint firstItem="0bF-Mf-cxc" firstAttribute="top" secondItem="4y9-OJ-AMm" secondAttribute="bottom" constant="20" id="OnX-8w-z0P"/>
+                            <constraint firstItem="4y9-OJ-AMm" firstAttribute="leading" secondItem="N0u-v2-U34" secondAttribute="leading" constant="20" id="WFb-8Z-Axf"/>
+                            <constraint firstItem="k2m-a1-X2e" firstAttribute="leading" secondItem="N0u-v2-U34" secondAttribute="leading" constant="20" id="YY4-Og-Nlf"/>
+                            <constraint firstItem="N0u-v2-U34" firstAttribute="trailing" secondItem="k2m-a1-X2e" secondAttribute="trailing" constant="20" id="jzj-fz-ic2"/>
+                            <constraint firstItem="N0u-v2-U34" firstAttribute="trailing" secondItem="0bF-Mf-cxc" secondAttribute="trailing" constant="20" id="xOV-AS-ChB"/>
+                            <constraint firstItem="k2m-a1-X2e" firstAttribute="top" secondItem="N0u-v2-U34" secondAttribute="top" constant="40" id="xm0-hX-OLx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mAB-61-00H"/>
+                    <connections>
+                        <outlet property="songPerformerTextField" destination="4y9-OJ-AMm" id="OPz-q7-Bns"/>
+                        <outlet property="songTitleTextField" destination="k2m-a1-X2e" id="0nV-MV-me7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uEZ-c9-AKc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782.608695652174" y="65.625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jj9-2t-UfN">

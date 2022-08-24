@@ -7,18 +7,28 @@
 
 import UIKit
 
+// Este protocolo será utilizado para que a gente possa adicionar uma música favorita na tela AddSongViewController e seja possível atualizar a UITableView que se encontra em FavoriteSongViewController
+
+public protocol FavoriteSongDelegate: AnyObject {
+    func addNewSong(withTitle title: String, andPerformedBy performer: String)
+}
+
 class FavoriteSongViewController: UIViewController {
 
     var viewModel = FavoriteSongsViewModel()
 
     @IBOutlet weak var tableView: UITableView!
 
+    @IBOutlet weak var addSongButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         registerCell()
         setupTableView()
     }
+
+    // MARK: View
 
     func setupUI() {
         let appearance = UINavigationBarAppearance()
@@ -30,6 +40,7 @@ class FavoriteSongViewController: UIViewController {
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         title = viewModel.title
+        addSongButton.tintColor = .yellow
     }
 
     func registerCell() {
@@ -42,6 +53,25 @@ class FavoriteSongViewController: UIViewController {
         tableView.dataSource = self
     }
 
+    // MARK: Flow
+
+    @IBAction func addFavoriteSong(_ sender: Any) {
+        performSegue(withIdentifier: "addFavoriteSong", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? AddSongViewController else { return }
+        vc.delegate = self
+    }
+
+}
+
+// Aqui é onde a "mágica" acontece \o/
+extension FavoriteSongViewController: FavoriteSongDelegate {
+    func addNewSong(withTitle title: String, andPerformedBy performer: String) {
+        viewModel.addSong(withTitle: title, andPerformedBy: performer)
+        tableView.reloadData()
+    }
 }
 
 extension FavoriteSongViewController: UITableViewDelegate, UITableViewDataSource {
@@ -63,3 +93,5 @@ extension FavoriteSongViewController: UITableViewDelegate, UITableViewDataSource
         return 45.0
     }
 }
+
+
